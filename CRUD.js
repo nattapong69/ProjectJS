@@ -26,7 +26,35 @@ function editpost(id) {
     });
   }
 
-
+  function savepost(id,fname) {
+     console.log(id,fname);
+     var fname = fname;
+     //var title = title;
+ 
+     //console.log(text);
+     var newposts = {};
+     
+     newposts.id = id;
+     newposts.fname = $("#text").val();
+     //newposts.title = text;
+     
+     console.log(newposts);
+     console.log(newposts.fname);
+     $("#fname" + id).prop('readonly', true);
+     console.log(newposts);
+     var url = "http://localhost:3000/posts/"+id;
+     $("#fname" + id).prop("");
+     
+     $.ajax({
+         type: 'PUT',
+         data: newposts,
+         url: url,
+         success: function () {
+             //no data...just a success (200) status code
+             console.log(newposts);
+         }
+     });
+ } 
 
 $(function(){    
     
