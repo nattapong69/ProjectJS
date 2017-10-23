@@ -20,7 +20,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>    
     <script id="template" type="x-tmpl-mustache">
-        <br><br>
+        <br>
+        <label for="result" id="result">Result Data</label>
+        <br>
         <div id="show{{id}}">
             <label for="fname" id="fn">First Name: </label>
             <input type="text" class="fname" id="fname{{id}}" value="{{fname}}" readonly><br>
@@ -39,6 +41,7 @@
             <center>
             <h1 id="header">Welcome to CRUD</h1>
             </center>
+            <label for="input" id="input">Input Data</label><br>
             <label for="fname" id="f">First Name</label>
             <input type="text" id="fname" name="firstname" placeholder="Your name.."><br>
 

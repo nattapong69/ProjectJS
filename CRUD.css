@@ -108,6 +108,18 @@
     font-family: 'Chewy', cursive;
 }
 
+#result{
+    color:#00EEFF;
+    font-size: 40px;
+    font-family: 'Chewy', cursive;
+}
+
+#input{
+    color:#00EEFF;
+    font-size: 40px;
+    font-family: 'Chewy', cursive;
+}
+
 #fn{
     color:#4EFF00;
     font-size: 30px;
