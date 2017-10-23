@@ -4,16 +4,18 @@
 #header{
     color:#08FE03;
     font-size: 90px; 
-    font-family: fantasy;
+    font-family: 'Chewy', cursive;
 }
 #f{
     color:#4EFF00;
     font-size: 30px;
+    font-family: 'Chewy', cursive;
 }
 
 #l{
     color:#4EFF00;
     font-size: 30px;
+    font-family: 'Chewy', cursive;
 }
 
 #fname{
@@ -25,6 +27,7 @@
     background-color: rgba(44, 164, 252, 0.73);
     color: black;
     font-size: 20px;
+    font-family: 'Chewy', cursive;
 }
 
 #lname{
@@ -36,9 +39,11 @@
     background-color: rgba(44, 164, 252, 0.73);
     color: black;
     font-size: 20px;
+    font-family: 'Chewy', cursive;
 }
 
 #add{
+    font-size: 30px;
     width: 5%;
     padding: 10px 15px;
     margin: 8px 0;
@@ -46,16 +51,19 @@
     border: none;
     background-color: rgba(254, 0, 0, 0.73);
     color: black;
+    font-family: 'Chewy', cursive;
 }
 
 #show{
-    width: 5%;
+    font-size: 30px;
+    width: 10%;
     padding: 10px 15px;
     margin: 8px 0;
     box-sizing: border-box;
     border: none;
     background-color: rgba(254, 0, 0, 0.73);
     color: black;
+    font-family: 'Chewy', cursive;
 }
 
 #posts{    
@@ -85,6 +93,7 @@
     background-color: rgba(44, 164, 252, 0.73);
     color: black;
     font-size: 20px;
+    font-family: 'Chewy', cursive;
 }
 
 .lname{
@@ -96,4 +105,44 @@
     background-color: rgba(44, 164, 252, 0.73);
     color: black;
     font-size: 20px;
+    font-family: 'Chewy', cursive;
+}
+
+#fn{
+    color:#4EFF00;
+    font-size: 30px;
+    font-family: 'Chewy', cursive;
+}
+
+#ln{
+    color:#4EFF00;
+    font-size: 30px;
+    font-family: 'Chewy', cursive;
+}
+
+#delete{
+    color:#FFF300;
+    font-size: 30px;
+    font-family: 'Chewy', cursive;
+    width: 5%;
+    padding: 10px 15px;
+    margin: 8px 0;
+}
+
+#edit{
+    color:#FFF300;
+    font-size: 30px;
+    font-family: 'Chewy', cursive;
+    width: 5%;
+    padding: 10px 15px;
+    margin: 8px 0;
+}
+
+#save{
+    color:#FFF300;
+    font-size: 30px;
+    font-family: 'Chewy', cursive;
+    width: 5%;
+    padding: 10px 15px;
+    margin: 8px 0;
 }

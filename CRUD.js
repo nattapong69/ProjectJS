@@ -20,15 +20,15 @@ function editpost(id) {
         //data: {name: 'Billy Bob', age: 28},
         url: "http://localhost:3000/posts/",
         success: function () {
-            //no data...just a success (200) status code
+            //no data...just a success (200) status codeS
             console.log('Updated Successfully!');
         }
     });
   }
 
-$(function(){
 
-    
+
+$(function(){    
     
     $("#show").click(function(){
         console.log("Hello");
