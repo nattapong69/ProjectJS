@@ -1,4 +1,4 @@
-function deletepost(id){
+function deletepost(id) {
     alert('delete ' + id);
 
     //Delete from back end
@@ -8,72 +8,77 @@ function deletepost(id){
     })
 
     //Delete from front end
-    $("#show"+id).empty();
+    $("#show" + id).empty();
 }
 
 function editpost(id) {
-    alert('edit ' + id);
+    console.log(id);
+    //alert('Edit ' + id);
+    var url = "http://localhost:3000/data";
+
     $("#fname" + id).prop('readonly', false);
     $("#lname" + id).prop('readonly', false);
     $.ajax({
         type: 'PUT',
         //data: {name: 'Billy Bob', age: 28},
-        url: "http://localhost:3000/posts/",
+        url: url + "/" + id,
         success: function () {
-            //no data...just a success (200) status codeS
-            console.log('Updated Successfully!');
+            //no data...just a success (200) status code
+            console.log(id);
         }
     });
-  }
+}
 
-  function savepost(id,fname) {
-     console.log(id,fname);
-     var fname = fname;
-     //var title = title;
- 
-     //console.log(text);
-     var newposts = {};
-     
-     newposts.id = id;
-     newposts.fname = $("#text").val();
-     //newposts.title = text;
-     
-     console.log(newposts);
-     console.log(newposts.fname);
-     $("#fname" + id).prop('readonly', true);
-     console.log(newposts);
-     var url = "http://localhost:3000/posts/"+id;
-     $("#fname" + id).prop("");
-     
-     $.ajax({
-         type: 'PUT',
-         data: newposts,
-         url: url,
-         success: function () {
-             //no data...just a success (200) status code
-             console.log(newposts);
-         }
-     });
- } 
+function savepost(id, fname, lname) {
+    // console.log(id,title);
+    var fname = fname;
+    var lname = lname;
+    //var title = title;
 
-$(function(){    
-    
-    $("#show").click(function(){
+    //console.log(text);
+    var newposts = {};
+
+    newposts.id = id;
+    newposts.fname = $("#fname" + id).val();
+    newposts.lname = $("#lname" + id).val();
+    //newposts.title = text;
+
+    //console.log(newposts);
+    // console.log(newposts.title);
+    //$("#title" + id).prop('readonly', true);
+    // console.log(newposts);
+    var url = "http://localhost:3000/data/" + id;
+    // $("#title" + id).prop("");
+    $.ajax({
+        type: 'PUT',
+        data: newposts,
+        url: url,
+        success: function () {
+            //no data...just a success (200) status code
+            console.log(newposts);
+        }
+    });
+}
+
+
+$(function () {
+
+    $("#show").click(function () {
         console.log("Hello");
         $("#posts").empty();
         var url = "http://localhost:3000/data";
-        $.get(url, function(data){
-            console.log(data);  
+        $.get(url, function (data) {
+            console.log(data);
             var template = $('#template').html();
-            for(var i=0;i<data.length;i++){
+            for (var i = 0; i < data.length; i++) {
                 var rendered = Mustache.render(template, data[i]);
                 $("#posts").append(rendered);
-              //  $("#text").val("");
+                //  $("#text").val("");
             }
         });
     });
 
-    $("#add").click(function(){
+    $("#add").click(function () {
         // $("#posts").empty();
         var newposts = {};
         newposts.id = null;
@@ -93,28 +98,28 @@ $(function(){
         // var rendered = Mustache.render(template, mytext);
         // $("#posts").append(rendered);
         var url = "http://localhost:3000/data";
-        $.get(url, function(data){
-            console.log(data.length);  
+        $.get(url, function (data) {
+            console.log(data.length);
             var template = $('#template').html();
-            for(var i=data.length;i<=data.length;i++){
-                var rendered = Mustache.render(template, data[i-1]);
+            for (var i = data.length; i <= data.length; i++) {
+                var rendered = Mustache.render(template, data[i - 1]);
                 $("#show1").append(rendered);
             }
         });
     });
-    $("#clear").click(function(){
+    $("#clear").click(function () {
         $("#show1").empty();
-       
-        });
-        
+
     });
 
-    $("#edit").click(function(){
-        $("#posts").empty();
-       
-        });
-        
-  
+});
+
+$("#edit").click(function () {
+    $("#posts").empty();
+
+});
+
+
 
 /*function deleteEmpty(clear){
         for(var k in clear)
@@ -130,7 +135,7 @@ $(function(){
     for(var i=0;i<data.length;i++){
         deleteEmpty(a.children[i])
 }*/
-    
+
 
 /*function myFunction() {
                           var x = document.createElement("INPUT");

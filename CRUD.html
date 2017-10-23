@@ -20,6 +20,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>    
     <script id="template" type="x-tmpl-mustache">
+        <br><br>
         <div id="show{{id}}">
             <label for="fname" id="fn">First Name: </label>
             <input type="text" class="fname" id="fname{{id}}" value="{{fname}}" readonly><br>
@@ -44,7 +45,7 @@
             <label for="lname" id="l">Last Name</label>
             <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br>
 
-            <button type="button" id="add" class="btn btn-warning">Add</button>
+            <button type="button" id="add" class="btn btn-warning"><i class="fa fa-download" aria-hidden="true"></i>Add</button>
             <button type="button" id="show" class="btn btn-warning">Show All</button>
         </div>    
     <div id="posts"></div>
