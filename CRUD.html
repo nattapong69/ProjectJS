@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="CRUD.css">
+    <script src="CRUD.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script id="template" type="x-tmpl-mustache">
+        <div id="show{{id}}">
+            <label for="fname">First Name: </label>
+            <input type="text" class="fname" id="fname{{id}}" value="{{fname}}" readonly><br>
+            <label for="lname">Last Name: </label>
+            <input type="text" class="lname" id="lname{{id}}" value="{{lname}}" readonly><br>            
+            <button id="delete" onclick='deletepost({{id}})' class="btn btn-primary">delete</button>
+            <button id="edit" onclick='editpost({{id}})' class="btn btn-primary">edit</button>  
+            <button id="save" onclick='savepost({{id}})' class="btn btn-primary">save</button>        
+        </div>
+    </script>
+</head>
+
+<body id="bd">
+    
+        <div>
+            <center>
+            <h1 id="header">Welcome to CRUD</h1>
+            </center>
+            <label for="fname" id="f">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.."><br>
+
+            <label for="lname" id="l">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.."><br>
+
+            <button type="button" id="add" class="btn btn-warning">Add</button>
+            <button type="button" id="show" class="btn btn-warning">Show All</button>
+        </div>    
+    <div id="posts"></div>
+</body>
+
+</html>

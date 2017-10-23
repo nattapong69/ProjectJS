@@ -1,0 +1,99 @@
+#bd{    
+    background-image: url("image/stormtrooper_star_wars.jpg");
+}
+#header{
+    color:#08FE03;
+    font-size: 90px; 
+    font-family: fantasy;
+}
+#f{
+    color:#4EFF00;
+    font-size: 30px;
+}
+
+#l{
+    color:#4EFF00;
+    font-size: 30px;
+}
+
+#fname{
+    width: 20%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: rgba(44, 164, 252, 0.73);
+    color: black;
+    font-size: 20px;
+}
+
+#lname{
+    width: 20%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: rgba(44, 164, 252, 0.73);
+    color: black;
+    font-size: 20px;
+}
+
+#add{
+    width: 5%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: rgba(254, 0, 0, 0.73);
+    color: black;
+}
+
+#show{
+    width: 5%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: rgba(254, 0, 0, 0.73);
+    color: black;
+}
+
+#posts{    
+    
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+   
+    left: 600px;
+    top: -200px; 
+}
+
+#show1{    
+    
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+   
+    left: 600px;
+    top: -200px; 
+}
+
+.fname{
+    width: 20%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: rgba(44, 164, 252, 0.73);
+    color: black;
+    font-size: 20px;
+}
+
+.lname{
+    width: 20%;
+    padding: 10px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: rgba(44, 164, 252, 0.73);
+    color: black;
+    font-size: 20px;
+}
